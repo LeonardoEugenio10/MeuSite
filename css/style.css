@@ -1,0 +1,392 @@
+/* Estilos gerais */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+/* Seção do vídeo */
+
+.video-section {
+    width: 100%;
+    height: 100vh; /* Ocupa 100% da altura da tela */
+    position: relative;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1; /* Coloca o vídeo atrás do cabeçalho */
+}
+
+#bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz com que o vídeo cubra toda a área do contêiner */
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    z-index: 2; /* Coloca o cabeçalho acima do vídeo */
+}
+
+.header-info {
+    display: flex;
+    flex-direction: column;
+    padding-left: 270px;
+    align-items: flex-start;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar {
+    background-color: transparent;
+    font-family: 'Arsenal', sans-serif;
+} 
+
+.navbar ul {
+    list-style: none;
+    margin: 30px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.navbar ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+
+/* Mensagem sobre o vídeo */
+.message {
+    position: absolute;
+    top: 200px; /* Ajuste a posição conforme necessário */
+    left: 1100px;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 2rem;
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 3;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* Estilo do botão */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #0056b3;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #66a4f5;
+    color:black;
+    transform: scale(1);
+}
+/* Imagem de perfil */
+.profile-photo {
+    position: absolute;
+    top: 150px;
+    left: 100px;
+    width: 492px;
+    height: 520px;
+    border-radius: 50%;
+    border: 10px solid white;
+    object-fit: cover;
+    z-index: 3;
+}
+
+/* Seção de conteúdo principal */
+.content-section {
+    background-color: white;
+    padding: 40px 20px;
+    color: black;
+    min-height: 100vh; /* Garante que ocupa pelo menos a altura da tela */
+}
+.icons {
+    display: flex;
+    justify-content: space-between;
+    font-size: 40px;
+    margin: 0;
+    padding: 0 25px;
+    list-style: none;
+  }
+.icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .icons li i {
+    font-size: 1.5em;
+    color: #000;
+  }
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+#contato {
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    padding: 5px 0;
+    background: #fff;
+    text-align: justify;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+
+  }
+  
+  #contato h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #0056b3;
+    font-family: 'Telex', sans-serif;
+}
+
+#contato p {
+    font-size: 1.2em;
+    margin: 10px 0;
+  }
+  
+  #contato a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  #contato a:hover {
+    color: #777;
+    background-color: #fff;
+    transition: 0.3s;
+  }
+  
+  .social-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    list-style: none;
+    padding: 20px;
+}
+  
+  .social-links li {
+    margin: 0 15px;
+    padding: 20px;
+  }
+  
+  .social-links a {
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .social-links a:hover {
+    color: #333;
+}
+.text {
+    flex: 1;
+    max-width: 800px;
+    text-align: justify;
+    margin-right: 20px;    
+    font-family: 'Telex', sans-serif;
+}
+
+.image {
+    padding-right: 200px;
+    flex-shrink: 0;
+    max-width: 150px; /* Largura máxima da imagem */
+}
+
+.image img {
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.image-grid {
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+.image-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px; /* Largura máxima da imagem */
+}
+
+.image-row img {
+    width: 150px;
+    height: auto;
+    margin: 30px;
+}
+
+
+.content-section h2 {
+    margin-top: 0;
+    font-size: 2em;
+    color: #333;
+}
+
+.content-section p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+.content-section h3 {
+    font-size: 1.5em;
+    color: #555;
+}
+
+/* Rodapé */
+.footer {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 16px 0;
+    
+}
+/* Media queries para responsividade */
+
+@media only screen and (min-width: 350px) and (max-width: 1024px) {
+    /* Ajustes gerais */
+    body, html {
+        font-size: 11px; /* Diminui o tamanho da fonte para telas menores */
+    }
+
+    /* Seção do vídeo */
+    .video-section {
+        height: 100vh; /* Ajusta a altura dinamicamente conforme o conteúdo */
+        
+    }
+
+    .header {
+        flex-direction: column-reverse;
+        display: flex;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .header-info {
+        padding-left: 0px; /* Reduz o espaçamento à esquerda para se ajustar melhor */
+    }
+
+    /* Ajuste do navbar */
+    .navbar ul {
+        align-items: center;
+    }
+
+    .navbar ul li {
+        margin-left: 0; /* Remove a margem entre os itens do menu */
+        margin-bottom: 10px;
+    }
+
+    /* Mensagem sobre o vídeo */
+    .message {
+        margin-top: 50%;
+        left: 50%;
+        font-size: 1.3rem; /* Ajusta o tamanho da fonte para telas menores */
+    }
+
+    /* Imagem de perfil */
+    .profile-photo {
+        width: 200px;
+        height: 200px;
+        margin: auto;
+        border: 3px solid white;
+    }
+
+    /* Seção de conteúdo principal */
+    .content-wrapper {
+        flex-direction: column; /* Torna os elementos empilhados verticalmente */
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .text {
+        margin: 0 20px;
+        text-align: justify;
+    }
+
+    .image {
+        padding: 0;
+        max-width: 100px; /* Reduz a imagem para caber em telas menores */
+        margin-bottom: 20px;
+    }
+
+    /* Imagens adicionais */
+    .image-row {
+        flex-direction: column; /* Empilha as imagens verticalmente */
+        max-width: 100%; /* Permite que as imagens ocupem a largura disponível */
+    }
+
+    .image-row img {
+        width: 100px; /* Reduz o tamanho das imagens */
+        margin: 10px 0;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 10px 0;
+        font-size: 0.9rem; /* Ajusta o tamanho da fonte no rodapé */
+    }
+}
+    p {
+        opacity: 0;
+        position: relative;
+        transition: all 2s ease-in-out; /* Ajuste o tempo aqui */
+    }
+    
+    p.from-left {
+        transform: translateX(-100%); /* Início fora da tela à esquerda */
+    }
+    
+    p.from-right {
+        transform: translateX(100%); /* Início fora da tela à direita */
+    }
+    
+    p.visible {
+        opacity: 1;
+        transform: translateX(0); /* Move para o centro */
+    }
